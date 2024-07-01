@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .formulario{
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.js" method="get">
+        <fieldset>
+            <legend>dados pessoais</legend>
+            <div>
+                <label for="nome">Nome: </label><input type="text" name="nome" id="nome">
+            </div>
+            <div class="formulario">
+                <label for="email">Email: </label><input type="email" name="email" id="email" autocomplete="email" required>
+            </div>
+            <div class="formulario">
+                <label for="telefone">Telefone: </label><input type="tel" name="telefone" id="telefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4,5}$" required placeholder="(xx)xxxx-xxxx">
+            </div>
+        </fieldset>
+        <div class="formulario">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
