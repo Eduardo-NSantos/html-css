@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        .formulario{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.js" method="post">
+        <div class="formulario">
+            <label for="cor">cor: </label><input type="color" name="cor" id="cor" value="#5566ff">
+        </div>
+
+        <div class="formulario">
+            <label for="satisfacao">Nível de satisfação: </label><input type="range" name="satisfacao" id="satisfacao" min="1" max="5" value="2">
+        </div>
+
+        <div class="formulario">
+            <label for="foto">Foto do perfil: </label><input type="file" name="foto" id="foto">
+        </div>
+
+        <div class="formulario">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
