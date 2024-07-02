@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        .formulario{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.js">
+
+        <div class="formulario">
+            <label for="anoNascimento">Ano de nascimento: </label><input type="number" name="anoNascimento" id="anoNascimento" min="1900" max="2024" oninput="calcIdade()" required>
+        </div>
+        <div class="formulario">
+            <label for="idade">Sua idade é: </label><output id="idade"></output>
+        </div>
+        
+        <div class="formulario">
+            <input type="button" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <script>
+        function calcIdade(){
+            let atual = new Date().getFullYear()
+            idade.innerHTML = Number(atual) - Number(anoNascimento.value)
+        }
+    </script>
+</body>
+</html>
