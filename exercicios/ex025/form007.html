@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        .formulario{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.js" method="post">
+        
+        <div class="formulario">
+            <label for="estado">Estado: </label>
+            <select name="estado" id="estado">
+                <optgroup label="Região Sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="MA">Maranhão</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="formulario">
+            <label for="profissoes">Profissões: </label><input type="tel" name="profissoes" id="profissoes" list="listaProfissoes">
+            <datalist id="listaProfissoes">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </div>
+
+        <div class="formulario">
+            <label for="msg">Mensagem: </label><br>
+            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="formulario">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
